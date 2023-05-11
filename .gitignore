@@ -1,5 +1,7 @@
-contract-node/node_modules
-contract-node/yarn.lock
-contract-node/npm-debug.log
-contract-node/.DS_Store
+node-backend/node_modules
+node-backend/yarn.lock
+node-backend/npm-debug.log
+node-backend/.DS_Store
+node-backend/.env
+contract-node
 .DS_Store

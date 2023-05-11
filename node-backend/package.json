@@ -1,0 +1,26 @@
+{
+  "name": "contract-node",
+  "version": "1.0.0",
+  "description": "Backend for AI powered contract information provider",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "GPT",
+    "AI",
+    "Solidity",
+    "Web3"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "openai": "^3.2.1"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
