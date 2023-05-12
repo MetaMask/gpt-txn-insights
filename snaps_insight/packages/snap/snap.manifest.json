@@ -1,0 +1,26 @@
+{
+  "version": "0.1.0",
+  "description": "An experimental chatGPT powered tx-insight snap",
+  "proposedName": "ChatGPT Snap",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MetaMask/template-snap-monorepo.git"
+  },
+  "source": {
+    "shasum": "ZKGF6lxrwLtbCWhbUHlX3laXQPutjMWtUy7832dHwt8=",
+    "location": {
+      "npm": {
+        "filePath": "dist/bundle.js",
+        "iconPath": "images/icon.svg",
+        "packageName": "chatgpt_snap",
+        "registry": "https://registry.npmjs.org/"
+      }
+    }
+  },
+  "initialPermissions": {
+    "endowment:network-access": {},
+    "endowment:transaction-insight": {},
+    "endowment:ethereum-provider": {}
+  },
+  "manifestVersion": "0.1"
+}
