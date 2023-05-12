@@ -1,4 +1,4 @@
-const { Configuration, OpenAIApi } = require("openai");
+const { Configuration, OpenAIApi } = require("azure-openai");
 const https = require("https");
 const express = require("express");
 const cors = require("cors");
@@ -10,13 +10,16 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const KEY = process.env.CHAT_GPT_KEY;
-const configuration = new Configuration({
-  apiKey: KEY,
-});
-const openai = new OpenAIApi(configuration);
+const openai = (openAiApi = new OpenAIApi(
+  new Configuration({
+    apiKey: this.apiKey,
+    azure: {
+      apiKey: process.env.AZURE_OPENAI_KEY,
+      endpoint: "https://consensys-hackathon.openai.azure.com/",
+    },
+  })
+));
 
-// todo: error handling
 const getContractSourceCode = (contract_id) => {
   return new Promise((resolve) => {
     https
@@ -29,9 +32,11 @@ const getContractSourceCode = (contract_id) => {
           });
           resp.on("end", () => {
             const res = JSON.parse(data);
-            if (!res.result?.length || !res.result[0].SourceCode)
+            if (!res.result?.length || !res.result[0]?.SourceCode) {
               resolve("Contract source code not verified");
-            const source_code = res.result[0].SourceCode.replaceAll("  ", " ")
+              return;
+            }
+            const source_code = res.result[0]?.SourceCode?.replaceAll("  ", " ")
               .replaceAll("///", "//")
               .replace(/(\/\*[\s\S]*?\*\/|\/\/.*)/g, "")
               .replaceAll("\r", "")
