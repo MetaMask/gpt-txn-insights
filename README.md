@@ -14,8 +14,8 @@ This service that the snap queries has also been developed by us. What we do in 
 ### Thus the technologies used are:
 1. Snap in Flask
 2. NodeJS backend deployed on Heroku
-3. Etherscan api to get contract details
-4. Microsoft Azure OpenAI api
+3. Etherscan api to get contract details: https://docs.etherscan.io/api-endpoints/contracts
+4. Microsoft Azure OpenAI api: https://oai.azure.com/, https://platform.openai.com/docs/guides/chat 
 
 ### Local deployment
 1. Run a local build of flask using Metamask Extension branch [gpt_insight_snap](https://github.com/MetaMask/metamask-extension/tree/gpt_insight_snap). (This branch is required as it passes contract address parameters to transaction insight snap.)
