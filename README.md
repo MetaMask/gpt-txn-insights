@@ -1,11 +1,13 @@
-# GPT Powered Transaction Insights Snap
+# ChatGPT Powered Transaction Insights Snap
 
 The project has been developer for Cypherpunk Hackathon 2023.
 
 <img src="https://github.com/MetaMask/gpt-txn-insights/blob/main/demo/demo1.png?raw=true" width="200px" />
 
 ### Description
-As part of the project we developed a transaction insight snap. We pass to this snap transaction details like contract address and transaction data. The snap queries a service to get GPT powered insights about the transaction and display to the user.
+As part of the project we developed a ChatGPT powered transaction insight snap. It displays details of transaction's contract source code in Human Readable form to users.
+
+We pass to this snap transaction details like contract address and transaction data. The snap queries a service to get GPT powered insights about the transaction and display to the user.
 
 This service that the snap queries has also been developed by us. What we do in this service is using the contract address we obtain source code of the contract using etherscan api. We pass this source code and also transaction data with appropriate prompt to GPT api to get details about the contract and transaction data.
 
