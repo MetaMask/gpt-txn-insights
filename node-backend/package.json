@@ -18,7 +18,7 @@
     "azure-openai": "^0.9.4",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
+    "express": "^4.19.2",
     "openai": "^3.2.1"
   },
   "engines": {
